@@ -31,7 +31,7 @@ jobs:
           go test -v | go2xunit >report.xml
       - if: ${{failure()}}
         name: Create Issues
-        uses: nashmaniac/create-issue-action@v.1.1
+        uses: nashmaniac/create-issue-action@v1.1
         with:
           title: Build Failed!
           token: ${{secrets.GITHUB_TOKEN}}
